@@ -7,9 +7,10 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { CocktailComponent } from './components/cocktail/cocktail.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { GaleryComponent } from './components/galery/galery.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {HttpClientModule} from '@angular/common/http'
     HomeComponent,
     SearchComponent,
     CocktailComponent,
-    NavbarComponent
+    NavbarComponent,
+    GaleryComponent
   ],
   imports: [
     BrowserModule,

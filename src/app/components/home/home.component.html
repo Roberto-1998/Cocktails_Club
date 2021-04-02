@@ -1,8 +1,12 @@
-<p *ngFor="let cocktail of alcoholicDrinks">
-    {{cocktail.strDrink}}
-</p>
+<section class="drinks-content">
+    <h3>
+        <mat-icon>liquor</mat-icon> Alcoholic Drinks
+    </h3>
+    <app-galery *ngIf="alcoholicDrinks.length>0" [drinks]="alcoholicDrinks"></app-galery>
+</section>
 
 
-<p *ngFor="let cocktail of nonAlcoholicDrinks">
-    {{cocktail.strDrink}}
-</p>
+<!-- <section class="drinks-content">
+    <h3>Non Alcoholic Drinks</h3>
+    <app-galery *ngIf="alcoholicDrinks.length>0" [drinks]="alcoholicDrinks"></app-galery>
+</section> -->
