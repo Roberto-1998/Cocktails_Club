@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CocktailsService } from '../../services/cocktails.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  alcoholicDrinks:string[]=[];
+  nonAlcoholicDrinks:string[]=[];
+
+  constructor(
+    private _cocktails:CocktailsService
+  ) { }
 
   ngOnInit(): void {
+   this.fetchAlcoholicDrinks();
+   this.fetchNonAlcoholicDrinks();
+  }
+
+
+  fetchAlcoholicDrinks(){
+    this._cocktails.getAlcoholicDrinks().subscribe((data:any)=>{
+      console.log(data);
+      let tempDrinks:string[]=data;
+     this.alcoholicDrinks=tempDrinks.slice(1,10);
+    })
+  }
+
+  fetchNonAlcoholicDrinks(){
+    this._cocktails.getNonAlcoholicDrinks().subscribe((data:any)=>{
+      console.log(data);
+      let tempDrinks:string[]=data;
+     this.nonAlcoholicDrinks=tempDrinks.slice(1,10);
+    })
   }
 
 }
