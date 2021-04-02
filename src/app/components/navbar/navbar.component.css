@@ -21,10 +21,15 @@
 
 .navbar mat-icon {
     color: crimson;
+    animation: flashing 1s infinite ease-in-out;
 }
 
 .links {
     margin-right: 50px;
+}
+
+.links a {
+    margin-right: 30px;
 }
 
 .navbar div p span {
@@ -39,4 +44,13 @@
     margin: 0px 20px;
     letter-spacing: 1px;
     text-shadow: 1px 1px 8px rgb(245, 11, 57);
+}
+
+@keyframes flashing {
+    from {
+        color: crimson;
+    }
+    to {
+        color: whitesmoke;
+    }
 }
