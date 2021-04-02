@@ -1,12 +1,19 @@
 <section class="drinks-content">
-    <h3>
-        <mat-icon>liquor</mat-icon> Alcoholic Drinks
-    </h3>
+    <div class="title">
+
+        <h3>
+            Alcoholic Drinks
+        </h3>
+    </div>
+
     <app-galery *ngIf="alcoholicDrinks.length>0" [drinks]="alcoholicDrinks"></app-galery>
 </section>
 
 
-<!-- <section class="drinks-content">
-    <h3>Non Alcoholic Drinks</h3>
-    <app-galery *ngIf="alcoholicDrinks.length>0" [drinks]="alcoholicDrinks"></app-galery>
-</section> -->
+<section class="drinks-content">
+    <div class="title">
+        <h3>Non Alcoholic Drinks</h3>
+    </div>
+
+    <app-galery *ngIf="nonAlcoholicDrinks.length>0" [drinks]="nonAlcoholicDrinks"></app-galery>
+</section>

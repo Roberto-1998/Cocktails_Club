@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Playfair+Display&display=swap');
 .galery {
     display: flex;
     align-items: center;
@@ -8,6 +9,7 @@
 }
 
 mat-card {
+    height: 300px;
     width: 25%;
     margin-top: 50px;
 }
@@ -16,4 +18,9 @@ mat-card img {
     height: 230px;
     width: 100%;
     object-fit: contain;
+}
+
+mat-card mat-card-header mat-card-title {
+    font-family: 'Playfair Display', serif;
+    text-align: left;
 }
