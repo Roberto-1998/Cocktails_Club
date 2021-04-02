@@ -1,0 +1,42 @@
+.navbar {
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0 30px;
+    color: white;
+}
+
+.navbar .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar mat-icon {
+    color: crimson;
+}
+
+.links {
+    margin-right: 50px;
+}
+
+.navbar div p span {
+    color: crimson;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.navbar div p {
+    font-size: 0.8em;
+    text-transform: capitalize;
+    margin: 0px 20px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 8px rgb(245, 11, 57);
+}

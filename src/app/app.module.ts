@@ -8,6 +8,7 @@ import { SearchComponent } from './components/search/search.component';
 import { CocktailComponent } from './components/cocktail/cocktail.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MaterialModule } from './material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
