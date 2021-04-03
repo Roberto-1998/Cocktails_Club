@@ -30,8 +30,8 @@ export class CocktailsService {
 
   getCocktailDetails(id:string){
     let params=new HttpParams();
-    params=params.append('iid', id);
-    return this.http.get(`${this.URL}/api/json/v1/1/lookup.php${params}`);
+    params=params.append('i', id);
+    return this.http.get(`${this.URL}/api/json/v1/1/lookup.php?${params}`).pipe(map((result:any)=>result.drinks[0]));
   }
 
 
