@@ -1,7 +1,7 @@
 .container {
     margin-top: 80px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -13,4 +13,28 @@
 .info-content {
     width: 60%;
     margin: 0 auto;
+}
+
+.info-content>h2 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+
+.info-content div {
+    margin-top: 30px;
+}
+
+.info-content h3 {
+    text-transform: uppercase;
+}
+
+mat-list-item {
+    font-size: 1.1em !important;
+}
+
+.glass {
+    display: flex;
+    align-items: center;
 }

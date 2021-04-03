@@ -1,9 +1,46 @@
 <div class="container" *ngIf="cocktail">
     <div class="img-content">
-        <img [src]="cocktail.strDrinkThumb" alt="" width="300" height="300">
+        <!--  <img [src]="cocktail.strDrinkThumb" alt="" width="300" height="300"> -->
     </div>
 
     <div class="info-content">
-        <h3>{{cocktail.strDrink}}</h3>
+        <h2>{{cocktail.strDrink}}</h2>
+        <div>
+            <p>Category: {{cocktail.strAlcoholic}}</p>
+            <div class="glass">
+                <mat-icon>wine_bar</mat-icon>
+                <p>Type of Glass: {{cocktail.strGlass}}</p>
+            </div>
+
+        </div>
+
+        <mat-divider></mat-divider>
+        <div>
+            <h3>Ingredients</h3>
+
+            <mat-list role="list">
+                <mat-list-item *ngIf="cocktail.strIngredient1">{{cocktail.strIngredient1}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient2">{{cocktail.strIngredient2}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient3">{{cocktail.strIngredient3}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient4">{{cocktail.strIngredient4}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient5">{{cocktail.strIngredient5}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient6">{{cocktail.strIngredient6}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient7">{{cocktail.strIngredient7}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient8">{{cocktail.strIngredient8}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient9">{{cocktail.strIngredient9}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient10">{{cocktail.strIngredient10}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient11">{{cocktail.strIngredient11}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient12">{{cocktail.strIngredient12}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient13">{{cocktail.strIngredient13}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient14">{{cocktail.strIngredient14}}</mat-list-item>
+                <mat-list-item *ngIf="cocktail.strIngredient15">{{cocktail.strIngredient15}}</mat-list-item>
+            </mat-list>
+        </div>
+        <mat-divider></mat-divider>
+        <div>
+            <h3>Instructions</h3>
+            <p>{{cocktail.strInstructions}}</p>
+        </div>
+
     </div>
 </div>

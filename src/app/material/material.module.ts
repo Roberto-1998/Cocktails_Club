@@ -4,8 +4,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
-
-
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 const modules=[
   MatToolbarModule,
@@ -13,6 +13,8 @@ const modules=[
   MatButtonModule,
   MatCardModule,
   MatChipsModule,
+  MatDividerModule,
+  MatListModule,
 
 ]
 
