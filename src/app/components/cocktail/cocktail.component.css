@@ -1,0 +1,16 @@
+.container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-content {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.info-content {
+    width: 60%;
+    margin: 0 auto;
+}

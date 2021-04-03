@@ -33,6 +33,7 @@ export class CocktailComponent implements OnInit {
   fetchCocktailDetails(id){
       this._cocktails.getCocktailDetails(id).subscribe((data)=>{
         console.log(data);
+        this.cocktail=data;
       })
   }
 

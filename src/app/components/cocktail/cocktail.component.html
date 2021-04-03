@@ -1,1 +1,9 @@
-<p>cocktail works!</p>
+<div class="container" *ngIf="cocktail">
+    <div class="img-content">
+        <img [src]="cocktail.strDrinkThumb" alt="" width="300" height="300">
+    </div>
+
+    <div class="info-content">
+        <h3>{{cocktail.strDrink}}</h3>
+    </div>
+</div>
