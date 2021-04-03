@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 .container {
     margin-top: 80px;
     display: flex;
@@ -34,7 +35,18 @@ mat-list-item {
     font-size: 1.1em !important;
 }
 
-.glass {
-    display: flex;
-    align-items: center;
+.info-content p {
+    font-size: 1.3em;
+}
+
+.info-content p span {
+    font-weight: 600;
+}
+
+div p {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+mat-list-item {
+    font-style: italic;
 }

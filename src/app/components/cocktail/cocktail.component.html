@@ -1,16 +1,15 @@
 <div class="container" *ngIf="cocktail">
     <div class="img-content">
-        <!--  <img [src]="cocktail.strDrinkThumb" alt="" width="300" height="300"> -->
+        <img [src]="cocktail.strDrinkThumb" alt="" width="300" height="300">
     </div>
 
     <div class="info-content">
         <h2>{{cocktail.strDrink}}</h2>
-        <div>
-            <p>Category: {{cocktail.strAlcoholic}}</p>
-            <div class="glass">
-                <mat-icon>wine_bar</mat-icon>
-                <p>Type of Glass: {{cocktail.strGlass}}</p>
-            </div>
+        <div class="aspects">
+            <p> <span>Category</span> : {{cocktail.strAlcoholic}}</p>
+
+            <p> <span>Type of Glass</span> : {{cocktail.strGlass}}</p>
+
 
         </div>
 
