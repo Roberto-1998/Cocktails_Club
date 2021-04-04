@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import { GaleryComponent } from './components/galery/galery.component'
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { GaleryComponent } from './components/galery/galery.component'
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

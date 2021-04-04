@@ -2,7 +2,7 @@
     <div class="search">
         <mat-form-field class="example-form-field">
             <mat-label>Search</mat-label>
-            <input matInput type="text" autocomplete="off" #cocktail (keyup)="searchCocktail(cocktail.value)">
+            <input matInput type="text" autocomplete="off" (keyup)="onSearch($event)">
         </mat-form-field>
     </div>
 
