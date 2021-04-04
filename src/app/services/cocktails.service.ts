@@ -34,6 +34,14 @@ export class CocktailsService {
     return this.http.get(`${this.URL}/api/json/v1/1/lookup.php?${params}`).pipe(map((result:any)=>result.drinks[0]));
   }
 
+  searchCocktail(texto:string){
+/* https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita */
+    let params=new HttpParams();
+    params=params.append('s', texto);
+    return this.http.get(`${this.URL}/api/json/v1/1/search.php?${params}`).pipe(map((result:any)=>result.drinks));
+
+  }
+
 
 
 }

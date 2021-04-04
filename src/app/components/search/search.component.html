@@ -1,1 +1,14 @@
-<p>search works!</p>
+<section class="search-content">
+    <div class="search">
+        <mat-form-field class="example-form-field">
+            <mat-label>Search</mat-label>
+            <input matInput type="text" autocomplete="off" #cocktail (keyup)="searchCocktail(cocktail.value)">
+        </mat-form-field>
+    </div>
+
+    <section>
+        <app-galery [drinks]="cocktails"></app-galery>
+    </section>
+
+
+</section>

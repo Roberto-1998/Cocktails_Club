@@ -1,0 +1,13 @@
+.search-content {
+    margin-top: 80px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-form-field {
+    width: 30%;
+}
