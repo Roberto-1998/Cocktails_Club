@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CocktailsService } from '../../services/cocktails.service';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-home',
@@ -12,10 +13,12 @@ export class HomeComponent implements OnInit {
   nonAlcoholicDrinks:string[]=[];
 
   constructor(
-    private _cocktails:CocktailsService
+    private _cocktails:CocktailsService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
+  this.spinner.show();
    this.fetchAlcoholicDrinks();
    this.fetchNonAlcoholicDrinks();
   }
@@ -26,6 +29,7 @@ export class HomeComponent implements OnInit {
       console.log(data);
       let tempDrinks:string[]=data;
      this.alcoholicDrinks=tempDrinks.slice(1,10);
+   
     })
   }
 
@@ -34,6 +38,7 @@ export class HomeComponent implements OnInit {
       console.log(data);
       let tempDrinks:string[]=data;
      this.nonAlcoholicDrinks=tempDrinks.slice(1,10);
+     this.spinner.hide();
     })
   }
 
