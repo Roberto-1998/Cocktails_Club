@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CocktailsService } from '../../services/cocktails.service';
+import { NgxSpinnerService } from "ngx-spinner";
 
 
 @Component({
@@ -14,10 +15,12 @@ export class CocktailComponent implements OnInit {
 
   constructor(
     private _cocktails:CocktailsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
+    this.spinner.show();
     this.fetchParams();
   }
 
@@ -34,6 +37,7 @@ export class CocktailComponent implements OnInit {
       this._cocktails.getCocktailDetails(id).subscribe((data)=>{
         console.log(data);
         this.cocktail=data;
+        this.spinner.hide();
       })
   }
 
