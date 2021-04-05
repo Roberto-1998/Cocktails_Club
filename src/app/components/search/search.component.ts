@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { CocktailsService } from '../../services/cocktails.service';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-search',
@@ -18,7 +19,8 @@ export class SearchComponent implements OnInit {
 
 
   constructor(
-  private _cocktails:CocktailsService
+  private _cocktails:CocktailsService,
+  private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -34,9 +36,13 @@ export class SearchComponent implements OnInit {
   
   searchCocktail(text:string){
      if(text){
+       this.spinner.show();
         this._cocktails.searchCocktail(text).subscribe((data)=>{
           console.log(data);
+          this.spinner.hide();
           this.cocktails=data;
+        }, (error)=>{
+          this.spinner.hide();
         })
     }
 

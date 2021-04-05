@@ -11,6 +11,7 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import { GaleryComponent } from './components/galery/galery.component'
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { GaleryComponent } from './components/galery/galery.component'
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
-  
+    NgxSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
