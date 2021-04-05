@@ -26,6 +26,9 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     this.subjectKeyUp.pipe(debounceTime(1000)).subscribe((d)=>{
       this.searchCocktail(d);
+    },  (error)=>{
+      console.log(error);
+      this.spinner.hide();
     });
   }
 
@@ -41,7 +44,8 @@ export class SearchComponent implements OnInit {
           console.log(data);
           this.spinner.hide();
           this.cocktails=data;
-        }, (error)=>{
+        },  (error)=>{
+          console.log(error);
           this.spinner.hide();
         })
     }

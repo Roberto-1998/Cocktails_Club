@@ -30,13 +30,19 @@ export class CocktailComponent implements OnInit {
      console.log(params['id']);
      let id=params['id'];
      this.fetchCocktailDetails(id);
-   })
+   }, (error)=>{
+    console.log(error);
+    this.spinner.hide();
+  })
   }
 
   fetchCocktailDetails(id){
       this._cocktails.getCocktailDetails(id).subscribe((data)=>{
         console.log(data);
         this.cocktail=data;
+        this.spinner.hide();
+      },  (error)=>{
+        console.log(error);
         this.spinner.hide();
       })
   }

@@ -30,6 +30,9 @@ export class HomeComponent implements OnInit {
       let tempDrinks:string[]=data;
      this.alcoholicDrinks=tempDrinks.slice(1,10);
    
+    }, (error)=>{
+      console.log(error);
+      this.spinner.hide();
     })
   }
 
@@ -39,6 +42,9 @@ export class HomeComponent implements OnInit {
       let tempDrinks:string[]=data;
      this.nonAlcoholicDrinks=tempDrinks.slice(1,10);
      this.spinner.hide();
+    }, (error)=>{
+      console.log(error);
+      this.spinner.hide();
     })
   }
 
