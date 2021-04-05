@@ -11,3 +11,11 @@
 .example-form-field {
     width: 30%;
 }
+
+.results-info {
+    margin-top: 40px;
+    font-size: 1.7em;
+    font-family: 'New Tegomin', serif;
+    text-align: center;
+    color: firebrick;
+}
