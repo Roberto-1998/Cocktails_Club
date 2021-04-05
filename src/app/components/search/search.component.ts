@@ -12,7 +12,8 @@ import { NgxSpinnerService } from "ngx-spinner";
 export class SearchComponent implements OnInit {
 
  
-  cocktails;
+  cocktails=[];
+  noResults:boolean=false;
  
 
   private subjectKeyUp=new Subject<any>();
@@ -42,8 +43,19 @@ export class SearchComponent implements OnInit {
        this.spinner.show();
         this._cocktails.searchCocktail(text).subscribe((data)=>{
           console.log(data);
-          this.spinner.hide();
-          this.cocktails=data;
+          if(data===null){
+           
+            this.noResults=true;
+            this.cocktails=[];
+            this.spinner.hide();
+          }else{
+           
+            this.noResults=false;
+            this.cocktails=data;
+            this.spinner.hide();
+          }
+         
+         
         },  (error)=>{
           console.log(error);
           this.spinner.hide();

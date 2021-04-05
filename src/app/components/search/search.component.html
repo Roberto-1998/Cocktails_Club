@@ -7,7 +7,8 @@
     </div>
 
     <section>
-        <app-galery [drinks]="cocktails"></app-galery>
+        <app-galery *ngIf="cocktails.length>0" [drinks]="cocktails"></app-galery>
+        <p *ngIf="noResults">Sorry, We couldn't find any cocktail with that name</p>
     </section>
 
 
